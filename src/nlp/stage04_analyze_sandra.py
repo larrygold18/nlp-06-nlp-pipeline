@@ -124,6 +124,33 @@ def _plot_token_length_histogram(
     LOG.info(f"Saved token length histogram to {output_path}")
 
 
+def _save_top_tokens_table(
+    tokens: list[str],
+    top_n: int,
+    output_path: Path,
+    LOG: logging.Logger,
+) -> None:
+    """Save top token frequencies to a CSV file.
+
+    Args:
+        tokens (list[str]): List of cleaned tokens.
+        top_n (int): Number of top tokens to save.
+        output_path (Path): Path to save the CSV file.
+        LOG (logging.Logger): The logger instance.
+    """
+    if not tokens:
+        LOG.warning("No tokens available for top token table.")
+        return
+
+    counter = Counter(tokens)
+    most_common = counter.most_common(top_n)
+
+    top_tokens_df = pd.DataFrame(most_common, columns=["token", "frequency"])
+    top_tokens_df.to_csv(output_path, index=False)
+
+    LOG.info(f"Saved top token table to {output_path}")
+
+
 # ============================================================
 # Section 3. Define Run Analyze Function
 # ============================================================
@@ -230,3 +257,18 @@ def run_analyze(
 
     LOG.info("Sink: visualizations saved to data/processed/")
     LOG.info("Analysis complete.")
+
+    # ============================================================
+    # PHASE 4.5: Save top token frequency table
+    # ============================================================
+
+    LOG.info("========================")
+    LOG.info("PHASE 4.5: Save top token frequency table")
+    LOG.info("========================")
+
+    _save_top_tokens_table(
+        tokens=tokens,
+        top_n=top_n,
+        output_path=output_dir / "sandra_top_tokens_table.csv",
+        LOG=LOG,
+    )

@@ -599,3 +599,125 @@
 2026-04-09 15:55:04 | INFO | CI | ========================
 2026-04-09 15:55:04 | INFO | CI | Pipeline executed successfully!
 2026-04-09 15:55:04 | INFO | CI | ========================
+2026-04-10 11:53:55 | INFO | CI | === RUN START ===
+2026-04-10 11:53:55 | INFO | CI | project=Module 6: Sandra Custom EVTAL PIPELINE - WEB DOCUMENTS (HTML)
+2026-04-10 11:53:55 | INFO | CI | repo_dir=nlp-06-nlp-pipeline
+2026-04-10 11:53:55 | INFO | CI | python=3.14.3
+2026-04-10 11:53:55 | INFO | CI | os=Windows 11
+2026-04-10 11:53:55 | INFO | CI | shell=powershell
+2026-04-10 11:53:55 | INFO | CI | cwd=.
+2026-04-10 11:53:55 | INFO | CI | github_actions=False
+2026-04-10 11:53:55 | INFO | CI | START PIPELINE
+2026-04-10 11:53:55 | INFO | CI | ROOT_PATH = .
+2026-04-10 11:53:55 | INFO | CI | DATA_PATH = data
+2026-04-10 11:53:55 | INFO | CI | RAW_PATH = data\raw
+2026-04-10 11:53:55 | INFO | CI | PROCESSED_PATH = data\processed
+2026-04-10 11:53:55 | INFO | CI | ========================
+2026-04-10 11:53:55 | INFO | CI | STAGE 01: EXTRACT starting... 
+2026-04-10 11:53:55 | INFO | CI | ========================
+2026-04-10 11:53:55 | INFO | CI | EXTRACT: Fetching HTML from https://arxiv.org/abs/2602.20021
+2026-04-10 11:53:55 | INFO | CI | SOURCE URL = https://arxiv.org/abs/2602.20021
+2026-04-10 11:53:55 | INFO | CI | SINK PATH = data\raw\sandra_raw.html
+2026-04-10 11:53:55 | INFO | CI | ========================
+2026-04-10 11:53:55 | INFO | CI | STAGE 02: VALIDATE starting...
+2026-04-10 11:53:55 | INFO | CI | ========================
+2026-04-10 11:53:55 | INFO | CI | HTML STRUCTURE INSPECTION:
+2026-04-10 11:53:56 | INFO | CI | Top-level type: BeautifulSoup
+2026-04-10 11:53:56 | INFO | CI | Top-level elements: ['html']
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Title found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Authors found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Abstract found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Subjects found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Dateline found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: Canonical link found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: PDF link found: True
+2026-04-10 11:53:56 | INFO | CI | VALIDATE: HTML structure is valid.
+2026-04-10 11:53:56 | INFO | CI | Sink: validated BeautifulSoup object
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | STAGE 03: TRANSFORM starting...
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | PHASE 3.1: Extract raw fields from HTML
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | Extracted title: Agents of Chaos
+2026-04-10 11:53:56 | INFO | CI | Extracted authors: Natalie Shapira, Chris Wendler, Avery Yen, Gabriele Sarti, Koyena Pal, Olivia Floody, Adam Belfki, Alex Loftus, Aditya Ratan Jannali, Nikhil Prakash, Jasmine Cui, Giordano Rogers, Jannik Brinkmann, Can Rager, Amir Zur, Michael Ripa, Aruna Sankaranarayanan, David Atkinson, Rohit Gandikota, Jaden Fiotto-Kaufman, EunJeong Hwang, Hadas Orgad, P Sam Sahil, Negev Taglicht, Tomer Shabtay, Atai Ambus, Nitay Alon, Shiri Oron, Ayelet Gordon-Tapiero, Yotam Kaplan, Vered Shwartz, Tamar Rott Shaham, Christoph Riedl, Reuth Mirsky, Maarten Sap, David Manheim, Tomer Ullman, David Bau
+2026-04-10 11:53:56 | INFO | CI | Extracted subjects: Computer Science > Artificial Intelligence
+2026-04-10 11:53:56 | INFO | CI | Extracted submitted date: [Submitted on 23 Feb 2026]
+2026-04-10 11:53:56 | INFO | CI | Extracted arxiv_id: 2602.20021
+2026-04-10 11:53:56 | INFO | CI | Extracted pdf_url: https://arxiv.org/pdf/2602.20021
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | PHASE 3.2: Clean and normalize text fields
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | abstract raw preview: We report an exploratory red-teaming study of autonomous language-model-powered agents deployed in a live laboratory env...
+2026-04-10 11:53:56 | INFO | CI | abstract clean preview: report exploratory redteaming study autonomous languagemodelpowered agents deployed live laboratory environment persiste...
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | PHASE 3.3: Engineer derived features
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | author_count: 38
+2026-04-10 11:53:56 | INFO | CI | abstract_word_count: 177
+2026-04-10 11:53:56 | INFO | CI | abstract_char_count: 1444
+2026-04-10 11:53:56 | INFO | CI | token_count: 121
+2026-04-10 11:53:56 | INFO | CI | unique_token_count: 111
+2026-04-10 11:53:56 | INFO | CI | type_token_ratio: 0.9174
+2026-04-10 11:53:56 | INFO | CI | avg_token_length: 8.6
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | PHASE 3.4: Build record and create DataFrame
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | Created DataFrame with 1 row and 16 columns
+2026-04-10 11:53:56 | INFO | CI | Columns: ['arxiv_id', 'title', 'authors', 'author_count', 'subjects', 'submitted', 'pdf_url', 'abstract_raw', 'abstract_clean', 'tokens', 'abstract_word_count', 'abstract_char_count', 'token_count', 'unique_token_count', 'type_token_ratio', 'avg_token_length']
+2026-04-10 11:53:56 | INFO | CI | DF preview:
+     arxiv_id            title  author_count  token_count  type_token_ratio
+0  2602.20021  Agents of Chaos            38          121            0.9174
+2026-04-10 11:53:56 | INFO | CI | Sink: Pandas DataFrame created
+2026-04-10 11:53:56 | INFO | CI | Transformation complete.
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | STAGE 04: ANALYZE starting...
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | Paper: Agents of Chaos
+2026-04-10 11:53:56 | INFO | CI | Type-token ratio: 0.9174
+2026-04-10 11:53:56 | INFO | CI | Author count: 38
+2026-04-10 11:53:56 | INFO | CI | Average token length: 8.6
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:56 | INFO | CI | PHASE 4.1: Top 15 token frequency - bar chart
+2026-04-10 11:53:56 | INFO | CI | ========================
+2026-04-10 11:53:58 | INFO | CI | Saved bar chart to data\processed\sandra_top_tokens.png
+2026-04-10 11:53:58 | INFO | CI | ========================
+2026-04-10 11:53:58 | INFO | CI | PHASE 4.2: Word cloud
+2026-04-10 11:53:58 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | Saved word cloud to data\processed\sandra_wordcloud.png
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | PHASE 4.3: Token length histogram
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | Saved token length histogram to data\processed\sandra_token_length_histogram.png
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | PHASE 4.4: Top token summary (inline)
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | Top 15 tokens by frequency:
+2026-04-10 11:53:59 | INFO | CI |  1. report                    3
+2026-04-10 11:53:59 | INFO | CI |  2. agents                    3
+2026-04-10 11:53:59 | INFO | CI |  3. execution                 2
+2026-04-10 11:53:59 | INFO | CI |  4. researchers               2
+2026-04-10 11:53:59 | INFO | CI |  5. conditions                2
+2026-04-10 11:53:59 | INFO | CI |  6. behaviors                 2
+2026-04-10 11:53:59 | INFO | CI |  7. vulnerabilities           2
+2026-04-10 11:53:59 | INFO | CI |  8. system                    2
+2026-04-10 11:53:59 | INFO | CI |  9. exploratory               1
+2026-04-10 11:53:59 | INFO | CI | 10. redteaming                1
+2026-04-10 11:53:59 | INFO | CI | 11. study                     1
+2026-04-10 11:53:59 | INFO | CI | 12. autonomous                1
+2026-04-10 11:53:59 | INFO | CI | 13. languagemodelpowered      1
+2026-04-10 11:53:59 | INFO | CI | 14. deployed                  1
+2026-04-10 11:53:59 | INFO | CI | 15. live                      1
+2026-04-10 11:53:59 | INFO | CI | Sink: visualizations saved to data/processed/
+2026-04-10 11:53:59 | INFO | CI | Analysis complete.
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | PHASE 4.5: Save top token frequency table
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | Saved top token table to data\processed\sandra_top_tokens_table.csv
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | STAGE 04: LOAD starting...
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | SINK PATH = data\processed\sandra_processed.csv
+2026-04-10 11:53:59 | INFO | CI | ========================
+2026-04-10 11:53:59 | INFO | CI | Pipeline executed successfully!
+2026-04-10 11:53:59 | INFO | CI | ========================

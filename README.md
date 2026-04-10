@@ -433,3 +433,36 @@ of the pipeline.
 ![Bar Chart](./docs/images/case_top_tokens.png)
 
 ![Word Cloud](./docs/images/case_wordcloud.png)
+
+## Custom Modifications
+
+This project extends the original Module 6 EVTAL pipeline with additional NLP-focused analysis.
+
+My custom changes include:
+
+- extracting richer metadata from the HTML page
+- adding derived text metrics such as:
+  - author count
+  - abstract character count
+  - unique token count
+  - type-token ratio
+  - average token length
+  - lexical density
+- generating multiple outputs in the analysis stage, including:
+  - top-token bar chart
+  - word cloud
+  - token-length histogram
+  - top-token frequency table saved as CSV
+
+### Why these changes matter
+
+These additions make the project more analytical and useful.
+Instead of only cleaning and saving text, the pipeline now measures vocabulary richness, text density, and token frequency patterns.
+
+For example:
+
+- **Type-token ratio** helps estimate vocabulary variety.
+- **Lexical density** gives a simple measure of how information-rich the cleaned abstract is.
+- The **top-token CSV table** makes it easier to inspect exact word frequencies without relying only on charts.
+
+These changes help turn the project from a basic pipeline example into a more informative NLP analysis workflow.
